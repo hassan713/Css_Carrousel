@@ -1,0 +1,71 @@
+<style>
+		
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+
+
+.slides{
+	position: relative;
+	width: 600px;
+	height: 280px;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: grey;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+label{
+	margin: 0px;
+	padding: 0px;
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family:Helvetica;
+	font-size: 120px;
+	color: #fff;
+	transition: 0.5s transform ease-in-out;
+}
+label:nth-of-type(1){
+	background-color: lightcoral;
+}
+label:nth-of-type(2){
+	background-color: lightseagreen;
+	left: 100%;
+}
+label:nth-of-type(3){
+	background-color: blueviolet;  
+	left:200%; 
+}
+
+input[type="radio"]{
+	position: relative;
+	z-index: 100;
+	left: 43%;
+	top: 85%;
+	cursor: pointer;
+	/* display: none; */
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked ~ label{
+	transform: translateX(0%);
+}
+.slides input[type="radio"]:nth-of-type(2):checked ~ label{
+	transform: translateX(-100%);
+}
+.slides input[type="radio"]:nth-of-type(3):checked ~ label{
+	transform: translateX(-200%);
+}
+
+</style>
